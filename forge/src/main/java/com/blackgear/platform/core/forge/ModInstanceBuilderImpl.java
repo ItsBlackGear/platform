@@ -7,7 +7,6 @@ import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import org.jetbrains.annotations.Nullable;
 
 public class ModInstanceBuilderImpl {
     public static ModInstance builder(String modId, Runnable common, Runnable postCommon, Runnable client, Runnable postClient) {
@@ -15,7 +14,7 @@ public class ModInstanceBuilderImpl {
     }
 
     static class Forge extends ModInstance {
-        protected Forge(String modId, @Nullable Runnable onCommon, @Nullable Runnable onPostCommon, @Nullable Runnable onClient, @Nullable Runnable onPostClient) {
+        protected Forge(String modId, Runnable onCommon, Runnable onPostCommon, Runnable onClient, Runnable onPostClient) {
             super(modId, onCommon, onPostCommon, onClient, onPostClient);
         }
 

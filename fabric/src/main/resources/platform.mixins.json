@@ -5,6 +5,7 @@
   "client": [
   ],
   "mixins": [
+    "access.BiomeAccessor"
   ],
   "injectors": {
     "defaultRequire": 1

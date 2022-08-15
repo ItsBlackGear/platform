@@ -1,8 +1,7 @@
 package com.blackgear.platform.core.fabric;
 
-import com.blackgear.platform.core.ModInstance;
 import com.blackgear.platform.core.Environment;
-import org.jetbrains.annotations.Nullable;
+import com.blackgear.platform.core.ModInstance;
 
 public class ModInstanceBuilderImpl {
     public static ModInstance builder(String modId, Runnable common, Runnable postCommon, Runnable client, Runnable postClient) {
@@ -10,7 +9,7 @@ public class ModInstanceBuilderImpl {
     }
 
     static class Fabric extends ModInstance {
-        protected Fabric(String modId, @Nullable Runnable onCommon, @Nullable Runnable onPostCommon, @Nullable Runnable onClient, @Nullable Runnable onPostClient) {
+        protected Fabric(String modId, Runnable onCommon, Runnable onPostCommon, Runnable onClient, Runnable onPostClient) {
             super(modId, onCommon, onPostCommon, onClient, onPostClient);
         }
 

@@ -2,8 +2,6 @@ package com.blackgear.platform.core;
 
 import dev.architectury.injectables.annotations.ExpectPlatform;
 
-import javax.annotation.Nullable;
-
 public abstract class ModInstance {
     public final String modId;
     public Runnable onCommon;
@@ -11,7 +9,7 @@ public abstract class ModInstance {
     public Runnable onClient;
     public Runnable onPostClient;
 
-    protected ModInstance(String modId, @Nullable Runnable onCommon, @Nullable Runnable onPostCommon, @Nullable Runnable onClient, @Nullable Runnable onPostClient) {
+    protected ModInstance(String modId, Runnable onCommon, Runnable onPostCommon, Runnable onClient, Runnable onPostClient) {
         this.modId = modId;
         this.onCommon = onCommon;
         this.onPostCommon = onPostCommon;
@@ -58,26 +56,26 @@ public abstract class ModInstance {
         private Runnable onClient;
         private Runnable onPostClient;
 
-        public Builder(String modId) {
+        protected Builder(String modId) {
             this.modId = modId;
         }
 
-        public Builder commonSetup(Runnable common) {
+        public Builder common(Runnable common) {
             this.onCommon = common;
             return this;
         }
 
-        public Builder postCommonSetup(Runnable common) {
+        public Builder postCommon(Runnable common) {
             this.onPostCommon = common;
             return this;
         }
 
-        public Builder clientSetup(Runnable client) {
+        public Builder client(Runnable client) {
             this.onClient = client;
             return this;
         }
 
-        public Builder postClientSetup(Runnable client) {
+        public Builder postClient(Runnable client) {
             this.onPostClient = client;
             return this;
         }
