@@ -5,6 +5,8 @@
   "client": [
   ],
   "mixins": [
+    "access.AxeItemAccessor",
+    "access.FireBlockAccessor"
   ],
   "injectors": {
     "defaultRequire": 1

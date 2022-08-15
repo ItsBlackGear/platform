@@ -11,6 +11,9 @@ loom {
     accessWidenerPath = project(":common").loom.accessWidenerPath
 
     forge {
+        mixinConfig "platform-common.mixins.json"
+        mixinConfig "platform.mixins.json"
+
         convertAccessWideners = true
         extraAccessWideners.add loom.accessWidenerPath.get().asFile.name
     }
