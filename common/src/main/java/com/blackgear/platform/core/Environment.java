@@ -9,11 +9,11 @@ public class Environment {
     }
 
     @ExpectPlatform
-    public static Platform getPlatform() {
+    public static Loader getLoader() {
         throw new AssertionError();
     }
 
-    public enum Platform {
+    public enum Loader {
         FORGE,
         FABRIC
     }

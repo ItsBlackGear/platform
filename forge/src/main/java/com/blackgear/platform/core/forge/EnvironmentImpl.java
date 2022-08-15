@@ -8,7 +8,7 @@ public class EnvironmentImpl {
         return FMLLoader.getDist().isClient();
     }
 
-    public static Environment.Platform getPlatform() {
-        return Environment.Platform.FORGE;
+    public static Environment.Loader getLoader() {
+        return Environment.Loader.FORGE;
     }
 }

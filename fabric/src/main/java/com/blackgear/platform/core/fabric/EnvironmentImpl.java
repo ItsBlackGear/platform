@@ -9,7 +9,7 @@ public class EnvironmentImpl {
         return FabricLoader.getInstance().getEnvironmentType() == EnvType.CLIENT;
     }
 
-    public static Environment.Platform getPlatform() {
-        return Environment.Platform.FABRIC;
+    public static Environment.Loader getLoader() {
+        return Environment.Loader.FABRIC;
     }
 }
